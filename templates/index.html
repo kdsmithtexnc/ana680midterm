@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Classification</title>
+<style>
+	body {
+		background-color: #ADD8E6;
+	}
+
+	h1{
+		text-align: center;
+	}
+	
+</style>				
+
+</head>
+
+<body>
+
+<h1> Student Race/Ethnicity Prediction </h1>
+
+<h2> Model Inputs</h2>
+
+    <form action="{{ url_for('predict')}}" method="POST">
+    Math Score:  <input type="number" name="math_score"><br>
+    Reading Score:   <input type="number" name="reading_score"><br>
+    Writing Score:  <input type="number" name="writing_score"><br>
+	      
+        <input type=submit value=Submit>
+   </form>
+
+<h2> Prediction</h2>
+
+    Race/Ethnicity: {{ predict }}
+
+</body>
+</html>
